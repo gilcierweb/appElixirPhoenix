@@ -16,13 +16,17 @@ mix ecto.create
 mix ecto.migrate
 
 mix phoenix.gen.html Post posts title body:text
+```
 
+```rb
 # add web/router.ex
 scope "/", AppElixirPhoenix do
   ...  
   resources "/posts", PostController
 end
+```
 
+```shell
 mix ecto.migrate
 
 mix phoenix.gen.model Comment comments name:string content:text post_id:references:posts
@@ -30,13 +34,16 @@ mix phoenix.gen.model Comment comments name:string content:text post_id:referenc
 mix ecto.migrate
 
 mix ecto.rollback
+```
 
+```rb
 #add web/models/comment.ex
 belongs_to :post, AppElixirPhoenix.Post, foreign_key: :post_id
 
 #add web/models/post.ex
 has_many :comments, AppElixirPhoenix.Comment
-
+```
+```shell
 mix ecto.migrate
 ```
 ```rb
