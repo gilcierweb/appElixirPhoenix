@@ -36,8 +36,8 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :appElixirPhoenix, AppElixirPhoenix.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
+  username: "gilcier",
+  password: "gil123",
   database: "appelixirphoenix_dev",
   hostname: "localhost",
   pool_size: 10
