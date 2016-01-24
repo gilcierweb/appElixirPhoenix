@@ -9,7 +9,7 @@ defmodule AppElixirPhoenix.Comment do
     timestamps
   end
 
-  @required_fields ~w(name content)
+  @required_fields ~w(name content post_id)
   @optional_fields ~w()
 
   @doc """

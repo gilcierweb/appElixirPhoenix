@@ -129,6 +129,8 @@ end
 <%= render "comment_form.html", post: @post, changeset: @changeset,
 action: post_post_path(@conn, :add_comment, @post) %>
 
+<%= render "comments.html", post: @post %>
+
 <%# create file web/templates/post/comments.html.eex%>
 
 <h3> Comments: </h3>
